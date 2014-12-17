@@ -1,0 +1,30 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">关键字信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{:U('Home/Route/info')}" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$info.id}" />
+        <dl>
+            <dt>关键字：</dt>
+            <dd><input type="text" name="keyword" value="{$info.keyword}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>回复ID：</dt>
+            <dd><input type="text" name="obj_id" value="{$info.obj_id}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt>回复类型：</dt>
+            <dd><input type="text" name="obj_type" value="{$info.obj_type}" class="w200" /></dd>
+        </dl>
+        <dl>
+            <dt></dt>
+            <dd><input type="submit" value="保 存" class="btn submit-btn" /></dd>
+        </dl>
+    </form>
+</div>
+<include file="Public:footer" />
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js"></script>

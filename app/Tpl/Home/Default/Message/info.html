@@ -1,0 +1,31 @@
+<include file="Public:header" />
+<div class="tabs">
+    <ul>
+        <li class="current"><a href="javascript:void(0)" class="current">留言信息</a></li>
+    </ul>
+</div>
+<div class="edit">
+    <form method="post" action="{:U('Home/Message/info')}" enctype="multipart/form-data">
+        <input type="hidden" name="id" value="{$info.id}" />
+         
+        <dl>
+            <dt>姓名：</dt>
+            <dd>{$info.username}</dd>
+        </dl>
+        <dl>
+            <dt>联系方式：</dt>
+            <dd>{$info.usertel}</dd>
+        </dl>
+         <dl>
+            <dt>留言内容：</dt>
+            <dd>{$info.text}</dd>
+        </dl>
+
+    </form>
+</div>
+<include file="Public:footer" />
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.config.js"></script>
+<script type="text/javascript" src="__PUBLIC__/js/ueditor/ueditor.all.js"></script>
+<script type="text/javascript">
+UE.getEditor('editor');
+</script>
